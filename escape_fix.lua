@@ -13,12 +13,9 @@ local function func(key_event, env)
     if (key_event:eq(KeyEvent("Escape"))) then
         log.info("!!! Escape key pressed: " .. key_event:repr())
         if (context:is_composing() or context:has_menu()) then
-            log.info("!!! has_menu = true")
             context:clear()
             M.escape_key_cancelled = true
             return 1
-        else
-            log.info("!!! has_menu = false")
         end
     elseif (key_event:eq(KeyEvent("Release+Escape")) and M.escape_key_cancelled) then
         M.escape_key_cancelled = false
