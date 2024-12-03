@@ -11,7 +11,6 @@ end
 local function func(key_event, env)
     context = env.engine.context
     if (key_event:eq(KeyEvent("Escape"))) then
-        log.info("!!! Escape key pressed: " .. key_event:repr())
         if (context:is_composing() or context:has_menu()) then
             context:clear()
             M.escape_key_cancelled = true

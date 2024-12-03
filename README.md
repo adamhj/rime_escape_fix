@@ -1,6 +1,6 @@
 #### escape_fix.lua
 
-修复rime的express_editor/fluid_editor在触发了Escape按键效果清除当前输入内容后，未正确拦截Escape键而将其发送给当前应用程序的Bug
+修复rime的express_editor/fluid_editor在触发了Escape按键效果清除当前输入内容后，未正确拦截Escape键而将其发送给当前应用程序的Bug([#956](https://github.com/rime/librime/issues/956))
 
 
 
